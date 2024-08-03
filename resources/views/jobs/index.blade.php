@@ -3,10 +3,10 @@
         <!-- Hero Search -->
         <section class="text-center space-y-10 pt-6">
             <h1 class="text-4xl font-semibold">Let's find your next job!</h1>
-            <form>
-                <input type="text" placeholder="Web Developer..."
-                       class="bg-white/5 px-5 py-4 rounded-xl border border-white/10 w-full max-w-xl">
-            </form>
+            <x-forms.form action="/search">
+                <x-forms.input type="text" name="q" :label="false" placeholder="Web Developer..."
+                               class="bg-white/5 px-5 py-4 rounded-xl border border-white/10 w-full max-w-xl"/>
+            </x-forms.form>
         </section>
 
         <!-- Top Jobs -->
