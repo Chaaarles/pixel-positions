@@ -1,7 +1,16 @@
 <x-layout>
-    <div class="space-y-10">
+    <div class="space-y-10 pb-10">
+        <!-- Hero Search -->
+        <section class="text-center space-y-10 pt-6">
+            <h1 class="text-4xl font-semibold">Let's find your next job!</h1>
+            <form>
+                <input type="text" placeholder="Web Developer..."
+                       class="bg-white/5 px-5 py-4 rounded-xl border border-white/10 w-full max-w-xl">
+            </form>
+        </section>
+
         <!-- Top Jobs -->
-        <section>
+        <section class="pt-10">
             <x-section-heading>Featured Jobs</x-section-heading>
 
             <div class="grid lg:grid-cols-3 gap-8 mt-6">
@@ -41,8 +50,11 @@
         </section>
 
         <!-- Recent Jobs -->
-        <section>
+        <section class="space-y-10">
             <x-section-heading>Recent Jobs</x-section-heading>
+            <x-wide-job></x-wide-job>
+            <x-wide-job></x-wide-job>
+            <x-wide-job></x-wide-job>
         </section>
     </div>
 </x-layout>
