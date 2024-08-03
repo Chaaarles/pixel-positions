@@ -14,9 +14,9 @@
             <x-section-heading>Featured Jobs</x-section-heading>
 
             <div class="grid lg:grid-cols-3 gap-8 mt-6">
-                <x-top-job/>
-                <x-top-job/>
-                <x-top-job/>
+                @foreach($featuredJobs as $job)
+                    <x-top-job :job="$job"/>
+                @endforeach
             </div>
         </section>
 
@@ -24,37 +24,18 @@
         <section class="space-y-6">
             <x-section-heading>Tags</x-section-heading>
             <div class="flex flex-row gap-2">
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-            </div>
-            <div class="flex flex-row gap-2">
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
-                <x-tag>Tag</x-tag>
+                @foreach($tags as $tag)
+                    <x-tag :$tag/>
+                @endforeach
             </div>
         </section>
 
         <!-- Recent Jobs -->
         <section class="space-y-10">
             <x-section-heading>Recent Jobs</x-section-heading>
-            <x-wide-job></x-wide-job>
-            <x-wide-job></x-wide-job>
-            <x-wide-job></x-wide-job>
+            @foreach($jobs as $job)
+                <x-wide-job :job="$job"/>
+            @endforeach
         </section>
     </div>
 </x-layout>
