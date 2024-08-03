@@ -15,9 +15,9 @@
                 <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="Pixel Positions logo">
             </a></div>
         <div class="flex flex-row gap-6 font-semibold">
-            <a href="/jobs">Jobs</a>
-            <a href="/salaries">Salaries</a>
-            <a href="/careers">Careers</a>
+            <a href="/">Jobs</a>
+            <a href="#">Salaries</a>
+            <a href="#">Careers</a>
         </div>
         <div class="flex flex-row gap-6">
             @auth
