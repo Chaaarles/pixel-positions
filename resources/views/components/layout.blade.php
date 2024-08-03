@@ -20,9 +20,18 @@
             <a href="/careers">Careers</a>
         </div>
         <div class="flex flex-row gap-6">
-            <a>Post a Job</a>
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
+            @auth
+                <a>Post a Job</a>
+                <form method="POST" action="/logout">
+                    @csrf
+                    @method('DELETE')
+                    <button>Log Out</button>
+                </form>
+            @endauth
+            @guest
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            @endguest
         </div>
     </nav>
 </header>
