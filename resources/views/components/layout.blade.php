@@ -21,7 +21,7 @@
         </div>
         <div class="flex flex-row gap-6">
             @auth
-                <a>Post a Job</a>
+                <a href="/jobs/create">Post a Job</a>
                 <form method="POST" action="/logout">
                     @csrf
                     @method('DELETE')
